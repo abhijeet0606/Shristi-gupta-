@@ -1,0 +1,753 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shristi Gupta | Aspiring Finance & Analytics Professional</title>
+  <meta name="description" content="Portfolio of Shristi Gupta — PGDM Student at IMDR Pune & B.Com Graduate. Focused on Corporate Finance, Payroll Compliance, Power BI & Financial Modeling.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@600;700&family=JetBrains+Mono:wght@500;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #060912;
+      --card-bg: rgba(15, 23, 42, 0.78);
+      --card-border: rgba(56, 189, 248, 0.16);
+      --card-border-hover: rgba(56, 189, 248, 0.38);
+      --accent: #38bdf8; /* Cyber electric cyan */
+      --accent-soft: rgba(56, 189, 248, 0.12);
+      --accent-glow: rgba(56, 189, 248, 0.25);
+      --text: #f8fafc;
+      --text-muted: #94a3b8;
+      --font-mono: 'JetBrains Mono', monospace;
+      --font-display: 'Space Grotesk', sans-serif;
+    }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      background-color: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      padding: 2.5rem 1rem;
+      background-image: 
+        radial-gradient(circle at 10% 12%, rgba(56, 189, 248, 0.08) 0%, transparent 45%),
+        radial-gradient(circle at 90% 88%, rgba(129, 140, 248, 0.08) 0%, transparent 45%),
+        linear-gradient(rgba(255, 255, 255, 0.015) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.015) 1px, transparent 1px);
+      background-size: 100% 100%, 100% 100%, 42px 42px, 42px 42px;
+      background-attachment: fixed;
+    }
+    .container {
+      max-width: 980px;
+      margin: 0 auto;
+    }
+
+    /* Cyber Navigation */
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: var(--card-bg);
+      backdrop-filter: blur(16px);
+      border: 1px solid var(--card-border);
+      border-radius: 16px;
+      padding: 0.85rem 1.75rem;
+      margin-bottom: 2rem;
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5);
+    }
+    .nav-brand {
+      font-family: var(--font-display);
+      font-weight: 800;
+      font-size: 1.25rem;
+      color: #fff;
+      text-decoration: none;
+      letter-spacing: 0.05em;
+    }
+    .nav-brand span {
+      color: var(--accent);
+      text-shadow: 0 0 10px var(--accent);
+    }
+    .nav-links {
+      display: flex;
+      gap: 1.25rem;
+    }
+    .nav-links a {
+      color: var(--text-muted);
+      text-decoration: none;
+      font-family: var(--font-mono);
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      transition: all 0.2s;
+    }
+    .nav-links a:hover {
+      color: var(--accent);
+      text-shadow: 0 0 8px rgba(56, 189, 248, 0.5);
+    }
+    @media (max-width: 680px) {
+      .nav-links {
+        display: none;
+      }
+    }
+
+    /* Hero Section */
+    header {
+      background: var(--card-bg);
+      backdrop-filter: blur(18px);
+      border: 1px solid var(--card-border);
+      border-radius: 24px;
+      padding: 2.75rem 2.25rem;
+      margin-bottom: 2rem;
+      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.6);
+      position: relative;
+      overflow: hidden;
+    }
+    header::after {
+      content: "";
+      position: absolute;
+      top: -100px;
+      right: -100px;
+      width: 250px;
+      height: 250px;
+      background: radial-gradient(circle, rgba(56, 189, 248, 0.15) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .status-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-family: var(--font-mono);
+      font-size: 0.78rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--accent);
+      background: var(--accent-soft);
+      border: 1px solid var(--card-border);
+      padding: 0.4rem 1rem;
+      border-radius: 50px;
+      margin-bottom: 1.5rem;
+    }
+    .pulse-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--accent);
+      box-shadow: 0 0 10px var(--accent);
+      animation: pulse 2s infinite;
+    }
+    @keyframes pulse {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50% { opacity: 0.4; transform: scale(0.85); }
+    }
+    h1 {
+      font-family: var(--font-display);
+      font-size: 2.85rem;
+      font-weight: 800;
+      line-height: 1.15;
+      margin-bottom: 0.6rem;
+      background: linear-gradient(135deg, #ffffff 40%, #cbd5e1 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .tagline {
+      font-family: var(--font-mono);
+      font-size: 1.05rem;
+      color: var(--accent);
+      margin-bottom: 1.25rem;
+    }
+    .bio {
+      font-size: 1rem;
+      color: var(--text-muted);
+      max-width: 820px;
+      margin-bottom: 1.75rem;
+    }
+    .meta-tokens {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      margin-bottom: 2rem;
+      font-family: var(--font-mono);
+      font-size: 0.82rem;
+    }
+    .meta-tokens span {
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      padding: 0.4rem 0.9rem;
+      border-radius: 10px;
+      color: #cbd5e1;
+    }
+    .actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.85rem;
+    }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid var(--card-border);
+      color: var(--text);
+      text-decoration: none;
+      padding: 0.7rem 1.4rem;
+      border-radius: 12px;
+      font-size: 0.9rem;
+      font-weight: 600;
+      transition: all 0.25s ease;
+      cursor: pointer;
+    }
+    .btn:hover {
+      background: var(--accent);
+      color: #060912;
+      border-color: var(--accent);
+      box-shadow: 0 0 16px rgba(56, 189, 248, 0.4);
+      transform: translateY(-2px);
+    }
+    .btn-primary {
+      background: linear-gradient(135deg, var(--accent), #2563eb);
+      color: #060912;
+      border: none;
+    }
+    .btn-primary:hover {
+      box-shadow: 0 0 20px rgba(56, 189, 248, 0.5);
+    }
+
+    /* Live Ticker */
+    .ticker {
+      overflow: hidden;
+      white-space: nowrap;
+      background: rgba(56, 189, 248, 0.04);
+      border: 1px solid var(--card-border);
+      border-radius: 14px;
+      padding: 0.7rem 0;
+      margin-bottom: 2rem;
+    }
+    .ticker-content {
+      display: inline-block;
+      animation: marquee 24s linear infinite;
+      font-family: var(--font-mono);
+      font-size: 0.82rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--accent);
+    }
+    @keyframes marquee {
+      0% { transform: translate3d(0, 0, 0); }
+      100% { transform: translate3d(-50%, 0, 0); }
+    }
+
+    /* Grid Layout */
+    .grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+    @media (min-width: 820px) {
+      .grid {
+        grid-template-columns: 1.85fr 1.15fr;
+      }
+    }
+    section {
+      background: var(--card-bg);
+      backdrop-filter: blur(16px);
+      border: 1px solid var(--card-border);
+      border-radius: 24px;
+      padding: 2.25rem;
+      margin-bottom: 2rem;
+      box-shadow: 0 12px 36px rgba(0, 0, 0, 0.35);
+      transition: border-color 0.25s ease;
+    }
+    section:hover {
+      border-color: var(--card-border-hover);
+    }
+    .section-header {
+      display: flex;
+      align-items: baseline;
+      gap: 0.75rem;
+      margin-bottom: 1.5rem;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+      padding-bottom: 0.75rem;
+    }
+    .section-num {
+      font-family: var(--font-mono);
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: var(--accent);
+    }
+    .section-title {
+      font-family: var(--font-display);
+      font-size: 1.4rem;
+      font-weight: 700;
+      color: #fff;
+    }
+
+    /* Experience & Certifications */
+    .item-block {
+      padding-bottom: 1.5rem;
+      margin-bottom: 1.5rem;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+    }
+    .item-block:last-child {
+      padding-bottom: 0;
+      margin-bottom: 0;
+      border-bottom: none;
+    }
+    .item-date {
+      font-family: var(--font-mono);
+      font-size: 0.8rem;
+      color: var(--accent);
+      margin-bottom: 0.25rem;
+    }
+    .item-title {
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: #fff;
+    }
+    .item-org {
+      font-family: var(--font-mono);
+      font-size: 0.88rem;
+      color: #93c5fd;
+      margin-bottom: 0.75rem;
+    }
+    .styled-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.55rem;
+    }
+    .styled-list li {
+      position: relative;
+      padding-left: 1.35rem;
+      font-size: 0.93rem;
+      color: #cbd5e1;
+    }
+    .styled-list li::before {
+      content: "▹";
+      position: absolute;
+      left: 0;
+      color: var(--accent);
+      font-family: var(--font-mono);
+    }
+
+    /* Award Badge Card */
+    .award-card {
+      background: rgba(56, 189, 248, 0.06);
+      border: 1px solid var(--card-border);
+      border-radius: 16px;
+      padding: 1.25rem;
+      margin-bottom: 1.5rem;
+    }
+    .award-title {
+      font-weight: 700;
+      color: #fff;
+      font-size: 1rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      margin-bottom: 0.4rem;
+    }
+    .award-desc {
+      font-size: 0.9rem;
+      color: #cbd5e1;
+    }
+
+    /* Education Table */
+    .edu-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 0.5rem;
+      font-size: 0.92rem;
+    }
+    .edu-table th {
+      text-align: left;
+      font-family: var(--font-mono);
+      font-size: 0.78rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--accent);
+      padding: 0.75rem 0.6rem;
+      border-bottom: 1px solid var(--card-border);
+    }
+    .edu-table td {
+      padding: 0.85rem 0.6rem;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+      color: #cbd5e1;
+    }
+    .edu-table tr:last-child td {
+      border-bottom: none;
+    }
+    .edu-table strong {
+      color: #fff;
+    }
+
+    /* Chips & Skills */
+    .subgroup {
+      margin-bottom: 1.5rem;
+    }
+    .subgroup-title {
+      font-family: var(--font-mono);
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--text-muted);
+      margin-bottom: 0.65rem;
+    }
+    .chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+    .chip {
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid var(--card-border);
+      padding: 0.4rem 0.85rem;
+      border-radius: 8px;
+      font-size: 0.85rem;
+      color: #e2e8f0;
+      transition: all 0.2s ease;
+    }
+    .chip:hover {
+      border-color: var(--accent);
+      color: #fff;
+      transform: translateY(-1px);
+    }
+    .chip-accent {
+      background: var(--accent-soft);
+      border-color: var(--card-border-hover);
+      color: var(--accent);
+      font-weight: 600;
+    }
+
+    /* Certifications Grid */
+    .cert-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 0.85rem;
+    }
+    .cert-item {
+      background: rgba(255, 255, 255, 0.02);
+      border: 1px solid rgba(255, 255, 255, 0.06);
+      border-radius: 12px;
+      padding: 0.85rem 1rem;
+    }
+    .cert-name {
+      font-weight: 700;
+      font-size: 0.92rem;
+      color: #fff;
+    }
+    .cert-issuer {
+      font-family: var(--font-mono);
+      font-size: 0.78rem;
+      color: var(--accent);
+      margin-bottom: 0.25rem;
+    }
+    .cert-desc {
+      font-size: 0.82rem;
+      color: var(--text-muted);
+    }
+
+    footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 2.5rem 0 1rem;
+      color: var(--text-muted);
+      font-family: var(--font-mono);
+      font-size: 0.82rem;
+      flex-wrap: wrap;
+      gap: 1rem;
+      border-top: 1px solid rgba(255, 255, 255, 0.06);
+      margin-top: 2rem;
+    }
+    footer a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body id="top">
+  <div class="container">
+    <!-- Navbar -->
+    <nav>
+      <a href="#top" class="nav-brand">SG<span>//FINANCE</span></a>
+      <div class="nav-links">
+        <a href="#objective">01//About</a>
+        <a href="#experience">02//Experience</a>
+        <a href="#education">03//Education</a>
+        <a href="#credentials">04//Credentials</a>
+        <a href="#arsenal">05//Arsenal</a>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header>
+      <div class="status-badge">
+        <span class="pulse-dot"></span>
+        Open to Finance Internships &amp; Entry-Level Roles
+      </div>
+      <h1>Shristi Gupta</h1>
+      <p class="tagline">Aspiring Finance Professional | PGDM Student at IMDR Pune | B.Com Graduate</p>
+      
+      <p class="bio">
+        A motivated B.Com graduate with an analytical mindset, seeking opportunities to gain hands-on exposure, strengthen financial concepts, and explore how emerging AI technologies and digital workflows transform modern finance functions.
+      </p>
+
+      <div class="meta-tokens">
+        <span>📍 Pune, Maharashtra, India</span>
+        <span>🎓 PGDM at IMDR, Pune (CGPA: 8.52)</span>
+        <span>⚡ Focus: Corporate Finance · Payroll Taxation · Analytics · AI Tools</span>
+      </div>
+
+      <div class="actions">
+        <a href="mailto:shristigupta0112@gmail.com" class="btn btn-primary">Transmit Email</a>
+        <button class="btn" onclick="navigator.clipboard.writeText('shristigupta0112@gmail.com'); alert('Email copied: shristigupta0112@gmail.com');">
+          Copy Email Address
+        </button>
+      </div>
+    </header>
+
+    <!-- Marquee Ticker -->
+    <div class="ticker">
+      <div class="ticker-content">
+        Financial Modelling &amp; Valuation ▹ Payroll Processing &amp; Tax Compliance ▹ Advanced MS Excel ▹ Power BI Dashboards ▹ Pre-MBA Statistics (IIM Ahmedabad) ▹ NISM Financial Literacy ▹ SQL Basics ▹ Generative AI in Finance ▹ Financial Modelling ▹ Payroll Processing ▹
+      </div>
+    </div>
+
+    <div class="grid">
+      <main>
+        <!-- Section 01: Career Objective -->
+        <section id="objective">
+          <div class="section-header">
+            <span class="section-num">01 //</span>
+            <h2 class="section-title">Career Objective</h2>
+          </div>
+          <p style="color: #cbd5e1; font-size: 0.96rem; margin-bottom: 1rem;">
+            Seeking an opportunity to gain practical exposure, strengthen conceptual understanding of finance, and explore how emerging AI technologies and digital tools are transforming the finance function.
+          </p>
+          <p style="color: #cbd5e1; font-size: 0.96rem;">
+            Aiming to develop both financial and technical competencies to work smarter, improve organizational efficiency, and adapt to evolving industry requirements while contributing meaningfully as a hardworking, detail-oriented professional.
+          </p>
+        </section>
+
+        <!-- Section 02: Experience -->
+        <section id="experience">
+          <div class="section-header">
+            <span class="section-num">02 //</span>
+            <h2 class="section-title">Professional Experience</h2>
+          </div>
+
+          <div class="item-block">
+            <div class="item-date">DEC 2024 – MAR 2025</div>
+            <div class="item-title">Payroll Intern</div>
+            <div class="item-org">Finsmart Accounting · Pune, Maharashtra</div>
+            <ul class="styled-list">
+              <li>Gained hands-on experience in corporate payroll processing and payroll tax compliance.</li>
+              <li>Carried out investment proof verification for income tax purposes, ensuring strict accuracy and regulatory adherence.</li>
+              <li>Applied core accounting competencies within a live, fast-paced financial services environment.</li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- Section 03: Academic Pedigree -->
+        <section id="education">
+          <div class="section-header">
+            <span class="section-num">03 //</span>
+            <h2 class="section-title">Academic Background</h2>
+          </div>
+
+          <table class="edu-table">
+            <thead>
+              <tr>
+                <th>Course / Year</th>
+                <th>Institute / Board</th>
+                <th>Metric</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>PGDM</strong> (Pursuing)</td>
+                <td>Institute of Management Development &amp; Research (IMDR), Pune</td>
+                <td style="color: var(--accent); font-weight: 600;">CGPA 8.52</td>
+              </tr>
+              <tr>
+                <td><strong>B.Com</strong> (Class of 2025)</td>
+                <td>Savitribai Phule Pune University, Pune</td>
+                <td>Completed</td>
+              </tr>
+              <tr>
+                <td><strong>Class 12 (CBSE)</strong> (2022)</td>
+                <td>RMD Sinhgad Spring Dale School, Pune</td>
+                <td>Completed</td>
+              </tr>
+              <tr>
+                <td><strong>Class 10 (CBSE)</strong> (2020)</td>
+                <td>RMD Sinhgad Spring Dale School, Pune</td>
+                <td>Completed</td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+
+        <!-- Section 04: Credentials & Certifications -->
+        <section id="credentials">
+          <div class="section-header">
+            <span class="section-num">04 //</span>
+            <h2 class="section-title">Certifications &amp; Courses</h2>
+          </div>
+
+          <div class="cert-grid">
+            <div class="cert-item">
+              <div class="cert-name">Pre-MBA Statistics</div>
+              <div class="cert-issuer">IIM Ahmedabad</div>
+              <div class="cert-desc">Statistical foundations and data-driven decision making.</div>
+            </div>
+
+            <div class="cert-item">
+              <div class="cert-name">Financial Modelling and Valuation</div>
+              <div class="cert-issuer">Udemy</div>
+              <div class="cert-desc">Financial forecasting, company valuation &amp; scenario analysis.</div>
+            </div>
+
+            <div class="cert-item">
+              <div class="cert-name">Advanced Microsoft Excel</div>
+              <div class="cert-issuer">Disha Computers</div>
+              <div class="cert-desc">Financial analysis, automated reporting &amp; structured data organization.</div>
+            </div>
+
+            <div class="cert-item">
+              <div class="cert-name">Analyzing and Visualizing Data with Power BI</div>
+              <div class="cert-issuer">Udemy</div>
+              <div class="cert-desc">Interactive dashboard development &amp; business metrics visualization.</div>
+            </div>
+
+            <div class="cert-item">
+              <div class="cert-name">Data Analytics (Excel with AI, Power BI, SQL)</div>
+              <div class="cert-issuer">IRA Skills</div>
+              <div class="cert-desc">Comprehensive analytics toolkit covering SQL, Excel AI &amp; BI reporting.</div>
+            </div>
+
+            <div class="cert-item">
+              <div class="cert-name">Financial Literacy Course for Bharat &amp; ODR Mechanism</div>
+              <div class="cert-issuer">NISM</div>
+              <div class="cert-desc">Budgeting, financial planning, risk assessment &amp; online dispute resolution.</div>
+            </div>
+
+            <div class="cert-item">
+              <div class="cert-name">AI For Everyone</div>
+              <div class="cert-issuer">DeepLearning.AI (Issued Aug 2025)</div>
+              <div class="cert-desc">Strategic AI frameworks, real-world deployment &amp; ethics.</div>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <aside>
+        <!-- Section 05: Honors & Awards -->
+        <section>
+          <div class="section-header">
+            <span class="section-num">05 //</span>
+            <h2 class="section-title">Key Recognition</h2>
+          </div>
+
+          <div class="award-card">
+            <div class="award-title">🏆 1st Prize — AI Tools Workshop</div>
+            <div class="award-desc">
+              Won 1st Prize in <em>"From Insight to Impact: An AI Tools Workshop"</em> at IMDR, Pune — earning the first internship opportunity through excellence in AI-assisted workflows.
+            </div>
+          </div>
+        </section>
+
+        <!-- Section 06: Technical Arsenal -->
+        <section id="arsenal">
+          <div class="section-header">
+            <span class="section-num">06 //</span>
+            <h2 class="section-title">Technical Arsenal</h2>
+          </div>
+
+          <div class="subgroup">
+            <div class="subgroup-title">Analytics &amp; Productivity</div>
+            <div class="chips">
+              <span class="chip chip-accent">Advanced MS Excel</span>
+              <span class="chip chip-accent">Power BI</span>
+              <span class="chip chip-accent">SQL (Basic)</span>
+              <span class="chip">MS PowerPoint</span>
+              <span class="chip">Canva</span>
+            </div>
+          </div>
+
+          <div class="subgroup">
+            <div class="subgroup-title">AI Toolset</div>
+            <div class="chips">
+              <span class="chip chip-accent">Claude</span>
+              <span class="chip chip-accent">ChatGPT</span>
+              <span class="chip">NotebookLM</span>
+              <span class="chip">Gamma</span>
+              <span class="chip">Julius.ai</span>
+            </div>
+          </div>
+
+          <div class="subgroup">
+            <div class="subgroup-title">Core Competencies</div>
+            <div class="chips">
+              <span class="chip">Adaptive Teamwork</span>
+              <span class="chip">Time Management</span>
+              <span class="chip">Problem Solving</span>
+              <span class="chip">Critical Thinking</span>
+              <span class="chip">Multitasking</span>
+              <span class="chip">Leadership</span>
+            </div>
+          </div>
+
+          <div class="subgroup">
+            <div class="subgroup-title">Languages</div>
+            <div class="chips">
+              <span class="chip">English</span>
+              <span class="chip">Hindi</span>
+              <span class="chip">Marathi</span>
+            </div>
+          </div>
+
+          <div class="subgroup" style="margin-bottom: 0;">
+            <div class="subgroup-title">Interests &amp; Pursuits</div>
+            <p style="font-size: 0.88rem; color: #cbd5e1; line-height: 1.6;">
+              Athletics (Outdoor Games) · Sketching · Content Creation · Cooking
+            </p>
+          </div>
+        </section>
+
+        <!-- Section 07: Comms -->
+        <section>
+          <div class="section-header">
+            <span class="section-num">07 //</span>
+            <h2 class="section-title">Let's Connect</h2>
+          </div>
+          <p style="font-size: 0.88rem; color: var(--text-muted); margin-bottom: 1.25rem;">
+            Actively seeking internships and entry-level opportunities in finance, accounting, and analytics.
+          </p>
+
+          <div style="display: flex; flex-direction: column; gap: 0.75rem;">
+            <a href="mailto:shristigupta0112@gmail.com" class="btn btn-primary" style="justify-content: center;">
+              shristigupta0112@gmail.com
+            </a>
+            <p style="font-size: 0.82rem; color: var(--text-muted); text-align: center; margin-top: 0.5rem;">
+              📍 Pune, Maharashtra, India
+            </p>
+          </div>
+        </section>
+      </aside>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+      <div>© 2026 Shristi Gupta · Finance &amp; Analytics Resume</div>
+      <a href="#top">Return to Top ↑</a>
+    </footer>
+  </div>
+</body>
+</html>
